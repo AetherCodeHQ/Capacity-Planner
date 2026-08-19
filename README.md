@@ -23,12 +23,12 @@ Every developer needs capacity planner — but existing tools are either too com
 
 ## Features
 
-- **Resource usage forecasting** — Resource usage forecasting
-- **Cost projections** — Cost projections
-- **Right-sizing recommendations** — Right-sizing recommendations
-- **Multi-cloud support** — Multi-cloud support
-- **Budget alerts** — Budget alerts
-- **CLI reports** — CLI reports
+- Resource usage forecasting
+- Cost projections
+- Right-sizing recommendations
+- Multi-cloud support
+- Budget alerts
+- CLI reports
 
 ## Quick Start
 
