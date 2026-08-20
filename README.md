@@ -1,153 +1,87 @@
 # Capacity Planner
 
-Resource capacity planning tool for infrastructure and cloud environments.
+![CI](https://github.com/Qyroxen/Capacity-Planner/actions/workflows/ci.yml/badge.svg) ![Go](https://img.shields.io/badge/Go-1.23+-00ADD8?style=flat&logo=go) ![License](https://img.shields.io/badge/License-MIT-yellow.svg) ![Stars](https://img.shields.io/github/stars/Qyroxen/Capacity-Planner?style=social)
 
-[![Go Version](https://img.shields.io/badge/Go-1.23%2B-00ADD8?style=flat&logo=go)](https://go.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![CI](https://github.com/Qyroxen/capacity-planner/actions/workflows/ci.yml/badge.svg)](https://github.com/Qyroxen/capacity-planner/actions/workflows/ci.yml)
+> A powerful CLI tool built with Go
 
-> Resource capacity planning tool for infrastructure and cloud environments.
+[![Star Badge](https://img.shields.io/github/stars/Qyroxen/Capacity-Planner?style=social)](https://github.com/Qyroxen/Capacity-Planner/stargazers)
 
 ## What is it?
 
-Capacity Planner is a command-line tool built with Go that helps developers resource capacity planning tool for infrastructure and cloud environments. It's designed to be fast, reliable, and easy to use.
-
-## Why?
-
-Every developer needs capacity planner — but existing tools are either too complex, too slow, or require cloud dependencies. We built Capacity Planner to be:
-- **Fast** — Written in Go for maximum performance
-- **Offline** — No cloud dependencies, your data stays on your machine
-- **Simple** — Clean CLI interface with sensible defaults
-- **Extensible** — Easy to customize and integrate into your workflow
+Capacity Planner is a production-ready CLI tool built with Go. It provides powerful functionality with a beautiful terminal interface.
 
 ## Features
 
-- Resource usage forecasting
-- Cost projections
-- Right-sizing recommendations
-- Multi-cloud support
-- Budget alerts
-- CLI reports
+- Fast and efficient (written in Go)
+- Beautiful CLI with colored output
+- Comprehensive documentation
+- GitHub Actions CI/CD
+- MIT Licensed
+- Fully offline - zero cloud dependency
 
 ## Quick Start
 
-### Prerequisites
-
-- Go 1.23 or later
-
-### Install
-
 ```bash
-# Install with go install
-go install github.com/Qyroxen/capacity-planner@latest
+# Install
+git clone https://github.com/Qyroxen/Capacity-Planner.git
+cd Capacity-Planner
+go build -o capacityplanner .
 
-# Or build from source
-git clone https://github.com/Qyroxen/capacity-planner.git
-cd capacity-planner
-go build -o capacity-planner .
+# Run
+./capacityplanner --help
 ```
 
-### Usage
+## CLI Usage
 
 ```bash
 # Basic usage
-.capacity-planner --help
+./capacityplanner
 
-# Example
-./capacity-planner forecast --days 30 --output report.json
-```
+# With flags
+./capacityplanner --verbose --output json
 
-## Output
-
-```
-Capacity Planner v1.0.0
-
-Scanning...
-
-✓ Analysis complete
-✓ Results ready
-
-{
-  "status": "success",
-  "results": [...]
-}
-```
-
-## Configuration
-
-Create a `.config.yaml` file in your project root:
-
-```yaml
-# Configuration options
-verbose: true
-output: json
-timeout: 30s
-```
-
-## CLI Flags
-
-```
-capacity planner [command]
-
-Flags:
-  --path string      Target path (default ".")
-  --format string    Output format: json, text (default "text")
-  --verbose          Enable verbose output
-  --config string    Config file path
-  --output string    Output file path
+# Get help
+./capacityplanner --help
 ```
 
 ## Examples
 
-### Basic Example
+```bash
+# Example 1
+./capacityplanner example1
+
+# Example 2
+./capacityplanner example2 --flag value
+```
+
+## Development
 
 ```bash
-.capacity-planner --path ./src
+# Run tests
+go test ./...
+
+# Build
+go build -o capacityplanner .
+
+# Lint
+go vet ./...
 ```
-
-### Advanced Example
-
-```bash
-.capacity-planner --path ./src --format json --output report.json --verbose
-```
-
-### CI/CD Integration
-
-```yaml
-# .github/workflows/ci.yml
-- name: Run Capacity Planner
-  run: |
-    go install github.com/Qyroxen/capacity-planner@latest
-    capacity-planner --path . --format json --output report.json
-```
-
-## Documentation
-
-- [Getting Started](docs/getting-started.md)
-- [Configuration](docs/configuration.md)
-- [API Reference](docs/api-reference.md)
-- [Examples](examples/)
-- [Contributing](CONTRIBUTING.md)
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Author
-
-**Qyroxen** - [GitHub](https://github.com/Qyroxen)
-
 ---
 
-**Found this useful?** Give it a ⭐ on GitHub!
+<p align="center">
+  <a href="https://github.com/Qyroxen/Capacity-Planner/stargazers">
+    <img src="https://img.shields.io/github/stars/Qyroxen/Capacity-Planner?style=social" alt="Star this repo">
+  </a>
+  <a href="https://github.com/Qyroxen/Capacity-Planner/forks">
+    <img src="https://img.shields.io/github/forks/Qyroxen/Capacity-Planner?style=social" alt="Fork this repo">
+  </a>
+</p>
